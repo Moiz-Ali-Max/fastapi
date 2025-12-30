@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from routers import youth_activity, weather, jokes
+from routers import user_activity, weather, jokes
 
 
 app = FastAPI()
@@ -23,6 +23,6 @@ def server_check():
 
 
 
-app.include_router(youth_activity.router, prefix="/youth", tags=["Youth Activity Routes"])
+app.include_router(user_activity.router, prefix="/user", tags=["Youth Activity Routes"])
 app.include_router(weather.router, prefix="/weather", tags=["Weather Route"])
 app.include_router(jokes.router, prefix="/joke", tags=['Jokes Route'])
